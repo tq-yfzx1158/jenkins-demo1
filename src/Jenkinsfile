@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stag("Build") {
+            steps {
+                echo "Hello world!"
+            }
+        }
+    }
+}
