@@ -2,6 +2,10 @@ pipeline{
   agent any
   environment {
     CC = 'clang'
+
+    __server_name = 'mail-server'
+    __version = "${env.BUILD_NUMBER}"
+    __artifact_name = "${__server_name}-${__version}.jar"
   }
 
   stages{
@@ -12,7 +16,8 @@ pipeline{
         
         steps{
           echo "${CC} ${DEBUG_FLAGS}"
-          sh "printenv"
+          echo "${__artifact_name}"
+          // sh "printenv"
         }
       }
   }
