@@ -17,6 +17,7 @@ pipeline{
         steps{
           echo "${CC} ${DEBUG_FLAGS}"
           echo "${__artifact_name}"
+          echo "${env.g_name}"
           // sh "printenv"
         }
       }
