@@ -11,7 +11,7 @@ pipeline{
         }
         
         steps{
-          sh "${CC} ${DEBUG_FLAGS}"
+          echo "${CC} ${DEBUG_FLAGS}"
           sh "printenv"
         }
       }
